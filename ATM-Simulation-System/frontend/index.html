@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ATM Simulation System</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="atm-container">
+
+        <!-- LOGIN SCREEN -->
+
+        <div id="loginScreen">
+
+            <div class="atm-header">
+
+                <h1>ATM SIMULATION SYSTEM</h1>
+
+                <p>Welcome to the ATM</p>
+
+            </div>
+
+
+            <div class="login-section">
+
+                <h2>Login</h2>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+
+                        <label for="accountNumber">
+                            Account Number
+                        </label>
+
+                        <input
+                            type="number"
+                            id="accountNumber"
+                            placeholder="Enter account number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="pin">
+                            PIN
+                        </label>
+
+                        <input
+                            type="password"
+                            id="pin"
+                            placeholder="Enter 4-digit PIN"
+                            maxlength="4"
+                            inputmode="numeric"
+                            pattern="[0-9]{4}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit">
+                        LOGIN
+                    </button>
+
+                </form>
+
+
+                <p id="message"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ATM DASHBOARD -->
+
+        <div id="dashboardScreen" class="hidden">
+
+            <div class="atm-header">
+
+                <h1>ATM SIMULATION SYSTEM</h1>
+
+                <p id="welcomeMessage">
+                    Welcome
+                </p>
+
+            </div>
+
+
+            <div class="account-info">
+
+                <p>
+                    Account Number:
+                    <span id="displayAccountNumber">
+                        -
+                    </span>
+                </p>
+
+            </div>
+
+
+            <h2 class="services-title">
+                ATM SERVICES
+            </h2>
+
+
+            <div class="services">
+
+                <button id="balanceButton">
+                    CHECK BALANCE
+                </button>
+
+                <button id="withdrawButton">
+                    WITHDRAW MONEY
+                </button>
+
+                <button id="depositButton">
+                    DEPOSIT MONEY
+                </button>
+
+                <button id="transferButton">
+                    TRANSFER MONEY
+                </button>
+
+                <button id="statementButton">
+                    MINI STATEMENT
+                </button>
+
+                <button id="changePinButton">
+                    CHANGE PIN
+                </button>
+
+                <button id="logoutButton">
+                    LOGOUT
+                </button>
+
+            </div>
+
+
+            <div id="dashboardMessage"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
